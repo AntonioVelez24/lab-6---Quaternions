@@ -1,4 +1,4 @@
-﻿using System;
+﻿    using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -13,6 +13,7 @@ namespace Mathematics.Week6
         private float xDirection;
         private float yDirection;
         private Rigidbody _compRigidbody;
+        [SerializeField] private GameObject explosionPrefab;
 
         [Header("Controls Properties")]
         [SerializeField] private float pitchPlane;
@@ -35,6 +36,15 @@ namespace Mathematics.Week6
         protected float _pitchDirection = 0f;
         protected float _rollDirection = 0f;
 
+        private void Update()
+        {
+            if (currentHealth <= 0) {
+
+                GameObject explosion = Instantiate(explosionPrefab, transform.position, Quaternion.identity);
+                Destroy(explosion, 1.0f);
+                Destroy(gameObject);                
+            }
+        }
         private void FixedUpdate()
         {
             pitchPlane += _pitchDirection * pitchGain * -1;
@@ -69,10 +79,9 @@ namespace Mathematics.Week6
 
         }
 
-
         private void Awake()
         {
-            currentHealth = 3;
+            currentHealth = health;
             _compRigidbody = GetComponent<Rigidbody>();
         }
         //Pitch -> X Axis
@@ -94,34 +103,14 @@ namespace Mathematics.Week6
         {
             xDirection = context.ReadValue<float>();
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        private void OnTriggerEnter(Collider collision)
+        {
+            if (collision.gameObject.CompareTag("Asteroid"))
+            {
+                currentHealth = currentHealth - 1;
+                Destroy(collision.gameObject);
+            }
+        }
         private float _verticalDirection = 0f;
         private float _horizontalDirection = 0f;
         [SerializeField] private float velocitySpeed = 5f;

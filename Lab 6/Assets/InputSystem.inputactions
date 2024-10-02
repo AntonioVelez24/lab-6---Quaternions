@@ -27,39 +27,6 @@
             "bindings": [
                 {
                     "name": "1D Axis",
-                    "id": "616657c9-6fc5-48af-8d91-1602ac6af982",
-                    "path": "1DAxis",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Movement X",
-                    "isComposite": true,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "negative",
-                    "id": "375d5724-1eac-4b2f-a29c-e7a6c600ab5f",
-                    "path": "<Joystick>/stick/left",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Movement X",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "positive",
-                    "id": "4411f406-c92c-4947-9a14-c2c67267a1a2",
-                    "path": "<Joystick>/stick/right",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Movement X",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "1D Axis",
                     "id": "3f2723f7-d37e-4935-aedf-c47675c867b7",
                     "path": "1DAxis",
                     "interactions": "",
@@ -88,39 +55,6 @@
                     "processors": "",
                     "groups": "",
                     "action": "Movement X",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "1D Axis",
-                    "id": "0d3014fa-4a95-4806-a584-263c63ebcaeb",
-                    "path": "1DAxis",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Movement Y",
-                    "isComposite": true,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "negative",
-                    "id": "898c94f3-0152-4bd9-900e-3700041406d7",
-                    "path": "<Joystick>/stick/down",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Movement Y",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "positive",
-                    "id": "8f2a9fb7-8433-494f-9251-00ca338e4b49",
-                    "path": "<Joystick>/stick/up",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Movement Y",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
