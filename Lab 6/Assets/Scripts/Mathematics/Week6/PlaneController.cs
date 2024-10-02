@@ -13,6 +13,7 @@ namespace Mathematics.Week6
         private float xDirection;
         private float yDirection;
         private Rigidbody _compRigidbody;
+        [SerializeField] private AudioSource _audioSource;
         [SerializeField] private GameObject explosionPrefab;
 
         [Header("Controls Properties")]
@@ -41,7 +42,8 @@ namespace Mathematics.Week6
             if (currentHealth <= 0) {
 
                 GameObject explosion = Instantiate(explosionPrefab, transform.position, Quaternion.identity);
-                Destroy(explosion, 1.0f);
+                Destroy(explosion, 0.5f);
+                _audioSource.Play();
                 Destroy(gameObject);                
             }
         }
